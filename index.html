@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="title">
+        <h1>Welcome to Queen solver</h1>
+        <h3>Pilih salah satu dari 2 cara input ini</h3>
+    </div>
+    <form id="inputGUI" onsubmit="getBoard(event)">
+        <label>Masukkan melalui GUI</label>
+        <textarea rows="10" cols="20" id="inputBoard"></textarea>
+        <input class="button" type="submit">
+    </form>
+    <form id="inputText" onsubmit="getBoard2(event)">
+        <label>Masukkan melalui file txt</label>
+        <input type="file" id="file">
+        <input class="button" type="submit">
+    </form>
+    <div id="selectContainer">
+        <select id="selectType">
+            <option value="queen">Queen</option>
+            <option value="rook">Rook</option>
+            <option value="bishop">Bishop</option>
+        </select>
+    </div>
+    <table id="answer"></table>
+    <script src="code.js"></script>
+</body>
+</html>
