@@ -8,7 +8,7 @@ body {
     "Pilih Pilih"
     "answer answer";
     grid-template-columns: 50% 50%;
-    grid-template-rows: 30% 35% 5% 30%;
+    grid-template-rows: 30% 35% 5%;
 }
 
 #title {
