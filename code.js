@@ -26,6 +26,7 @@ function getBoard2(event) {
 
 function makeBoard(input) {
     let type = document.getElementById("selectType").value
+    let answer = document.getElementById("answer")
     let row = input.split('\n')
     let size = row[0].split(' ')
     let height = size[0]
@@ -37,7 +38,14 @@ function makeBoard(input) {
     }
     if (board.length != height || board[0].length != width) {
         return
-    } 
+    }
+    let region = getChar(board)
+    console.log(region)
+    console.log(jumlah_pion)
+    if (region.length != jumlah_pion) {
+        answer.innerHTML = "Jumlah bidak tidak sesuai"
+        return
+    }
     getNodeBeside(board, jumlah_pion, type)
 }
 
